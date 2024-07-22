@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: roboto;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+body{
+  background-color: hsl(234, 29%, 20%);
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+.container{
+  background-color: white;
+  display: flex;
+  gap: 1em;
+  padding: 1.75em;
+  border-radius: 2em;
+}
+#form-id{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-family: roboto-regular;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3em;
+}
+h1{
+  font-size: 3.5em;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+p{
+  color:hsl(230, 6%, 58%);
+}
+.list>p{
+  margin-bottom: 1em;
+  display: flex;
+  gap: 1em;
+}
+label{
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+input[type='email'],button{
+  width: 100%;
+  padding: 1em;
+  margin-top: .5em;
+  border-radius: .5em;
+}
+input[type='email']{
+  border: 1px solid hsl(230, 6%, 58%);
+  color: hsl(233, 4%, 35%);
+  font-size: 16px;
+}
+input:focus{
+  outline: none;
+border: 1px solid hsl(234, 29%, 20%);
+cursor: pointer;
+}
+.input{
+  position: relative;
+}
+#error{
+  position: absolute;
+  right: 0px;
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+button{
+  background-color: hsl(234, 29%, 20%);
+  color: white; cursor: pointer;
+  border: none;
+  padding: 1.35em;
+}
+button:hover{
+background-image:linear-gradient(to right,rgb(255, 107, 132),hsl(4, 100%, 67%));
+box-shadow: 1px 10px 30px hsl(5, 100%, 82%);
+}
+#success-message{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: white;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  padding: 3em;
+  border-radius: 2em;
+  max-width: 33%;
+  box-sizing: content-box;
+  display: none;
+}
+.error-state{
+background-color: hsla(4, 100%, 67%, 0.219);
+color: hsl(4, 100%, 67%);
+border: 1px solid hsl(4, 72%, 56%);
+}
+
+@media (max-width:375px) {
+  body{
+    background-color: white;
+  }
+  #main-image{
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+    border-radius:0px 0px 0px 20px;
+  }
+  .container{
+    flex-direction: column-reverse;
+    padding: 0em;
+    border-radius: 0px;
+   
+  }
+  #success-message{
+    max-width: 100%;
+    border-radius: 0px;
+    height: 90%;
+    gap: 4em;
+    padding: 3em;
+    top:10%;
+    display: none;
+  }
+  
+}
+
+
+.attribution { font-size: 11px; text-align: center;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
